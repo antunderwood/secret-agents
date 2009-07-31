@@ -1,6 +1,6 @@
-<h1>New secret_messages</h1>
+<h1>New secret_message</h1>
 
-<% form_for(@secret_messages) do |f| %>
+<% form_for(@secret_message) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -8,8 +8,8 @@
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
   </p>
   <p>
     <%= f.submit 'Create' %>

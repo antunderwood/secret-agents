@@ -2,7 +2,7 @@ class CreateSecretMessages < ActiveRecord::Migration
   def self.up
     create_table :secret_messages do |t|
       t.string :title
-      t.text :content
+      t.text :description
 
       t.timestamps
     end

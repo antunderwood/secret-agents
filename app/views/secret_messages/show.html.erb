@@ -1,13 +1,13 @@
 <p>
   <b>Title:</b>
-  <%=h @secret_messages.title %>
+  <%=h @secret_message.title %>
 </p>
 
 <p>
-  <b>Content:</b>
-  <%=h @secret_messages.content %>
+  <b>Description:</b>
+  <%=h @secret_message.description %>
 </p>
 
 
-<%= link_to 'Edit', edit_secret_messages_path(@secret_messages) %> |
+<%= link_to 'Edit', edit_secret_message_path(@secret_message) %> |
 <%= link_to 'Back', secret_messages_path %>
