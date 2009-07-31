@@ -1,0 +1,22 @@
+<h1>Listing secret_messages</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+  </tr>
+
+<% @secret_messages.each do |secret_messages| %>
+  <tr>
+    <td><%=h secret_messages.title %></td>
+    <td><%=h secret_messages.content %></td>
+    <td><%= link_to 'Show', secret_messages %></td>
+    <td><%= link_to 'Edit', edit_secret_messages_path(secret_messages) %></td>
+    <td><%= link_to 'Destroy', secret_messages, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New secret_messages', new_secret_messages_path %>
