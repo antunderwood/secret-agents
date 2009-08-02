@@ -151,3 +151,131 @@ Rendering template within layouts/application
 Rendering secret_messages/index
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SecretMessagesController#index (for 127.0.0.1 at 2009-08-03 00:21:34) [GET]
+  [4;35;1mSecretMessage Load (0.0ms)[0m   [0mSELECT * FROM "secret_messages" [0m
+Rendering template within layouts/application
+Rendering secret_messages/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-08-03 00:21:39) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing SecretMessagesController#index (for 127.0.0.1 at 2009-08-03 00:21:39) [GET]
+  [4;36;1mSecretMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "secret_messages" [0m
+Rendering template within layouts/application
+Rendering secret_messages/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-08-03 00:21:47) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-08-03 00:21:53) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"admin", "password"=>"tropshop"}, "authenticity_token"=>"Odkl4ad+AZapbQ47EXWUGSCQpmJh7mPB+tAbBh5jymk="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 438ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing SecretMessagesController#index (for 127.0.0.1 at 2009-08-03 00:21:54) [GET]
+  [4;36;1mSecretMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "secret_messages" [0m
+Rendering template within layouts/application
+Rendering secret_messages/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-08-03 00:21:59) [GET]
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 125ms (DB: 16) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing SecretMessagesController#index (for 127.0.0.1 at 2009-08-03 00:21:59) [GET]
+  [4;35;1mSecretMessage Load (0.0ms)[0m   [0mSELECT * FROM "secret_messages" [0m
+Rendering template within layouts/application
+Rendering secret_messages/index
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PageController#index (for 127.0.0.1 at 2009-08-03 00:33:09) [GET]
+  Parameters: {"name"=>"welcome"}
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PageController#welcome (for 127.0.0.1 at 2009-08-03 00:33:44) [GET]
+
+ActionController::UnknownAction (No action responded to welcome. Actions: show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PageController#show (for 127.0.0.1 at 2009-08-03 00:34:18) [GET]
+  Parameters: {"name"=>"welcome"}
+Filter chain halted as [:ensure_valid] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 404 Not Found [http://127.0.0.1/site/welcome]
+
+
+Processing PageController#show (for 127.0.0.1 at 2009-08-03 00:35:02) [GET]
+  Parameters: {"name"=>"welcome"}
+Rendering template within layouts/application
+Rendering pages/welcome
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/site/welcome]
+
+
+Processing PageController#index (for 127.0.0.1 at 2009-08-03 00:35:12) [GET]
+  Parameters: {"name"=>"welcome"}
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PageController#show (for 127.0.0.1 at 2009-08-03 00:35:47) [GET]
+  Parameters: {"name"=>"welcome"}
+Rendering template within layouts/application
+Rendering pages/welcome
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
