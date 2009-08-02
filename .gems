@@ -1,2 +1,2 @@
-thoughtbot-clearance -v '>=0.6.9' -s 'gems.github.com'
+binarylogic-authlogic -v '>=2.1.1' -s 'gems.github.com'
 be9-acl9  -v '0.10.0' -s gems.github.com
