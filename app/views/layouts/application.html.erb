@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>SecretMessages: <%= controller.action_name %></title>
+  <title>Secret Agents</title>
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
@@ -12,6 +12,9 @@
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield %>
-
+<%- if current_user  -%>
+<br/>
+Logged in as <%= current_user.username %>
+<%- end -%>
 </body>
 </html>
