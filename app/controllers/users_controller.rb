@@ -13,6 +13,14 @@ def create
   end  
 end 
 
+def show
+  if current_user.has_role?(:admin)
+	@user = User.find(params[:id])
+	else
+    @user = current_user
+  end
+end
+
 def edit   
   @user = current_user   
 end  
