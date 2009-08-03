@@ -1,2 +1,3 @@
 RoRED.cfg
 log/*.log
+db/*.sqlite3

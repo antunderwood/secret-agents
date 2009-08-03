@@ -1,4 +1,10 @@
 class SecretMessagesController < ApplicationController
+  before_filter :load_secret_message, :only => [:edit, :update, :destroy, :show]
+
+  access_control do
+	  allow :admin
+		allow :agent , :of => :secret_message, :to =>  [:show]
+  end
   # GET /secret_messages
   # GET /secret_messages.xml
   def index
@@ -13,7 +19,6 @@ class SecretMessagesController < ApplicationController
   # GET /secret_messages/1
   # GET /secret_messages/1.xml
   def show
-    @secret_message = SecretMessage.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +39,6 @@ class SecretMessagesController < ApplicationController
 
   # GET /secret_messages/1/edit
   def edit
-    @secret_message = SecretMessage.find(params[:id])
   end
 
   # POST /secret_messages
@@ -57,7 +61,6 @@ class SecretMessagesController < ApplicationController
   # PUT /secret_messages/1
   # PUT /secret_messages/1.xml
   def update
-    @secret_message = SecretMessage.find(params[:id])
 
     respond_to do |format|
       if @secret_message.update_attributes(params[:secret_message])
@@ -74,7 +77,6 @@ class SecretMessagesController < ApplicationController
   # DELETE /secret_messages/1
   # DELETE /secret_messages/1.xml
   def destroy
-    @secret_message = SecretMessage.find(params[:id])
     @secret_message.destroy
 
     respond_to do |format|
@@ -82,4 +84,9 @@ class SecretMessagesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	private
+		def load_secret_message
+				@secret_message = SecretMessage.find(:first , :conditions => ['LOWER(title) = ?' , params[:id].gsub(/-/, ' ')])
+		end
+
 end
