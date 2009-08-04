@@ -68,6 +68,10 @@ a:hover { color: #fff; background-color:#000; }
   font-size: 15px;
   color: #660000;
 }
+.current_mission{
+  color: #660000;
+	font-weight: bold;
+}
 #secret_message_form {
   font-size: 30px;
   margin-top: 50px;
