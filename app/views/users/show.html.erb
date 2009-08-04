@@ -1,2 +1,7 @@
-<h2>Welcome <%= current_user.username %></h2><br/>
+Welcome <%= current_user.username %><br/><br/>
 Your current mission is Ethan's Birthday Mystery
+<div id= "secret_message_form">
+<% form_tag :controller => "secret_messages", :action => "show" do %>
+  Please enter you secret message below<br/><%= text_field_tag "id", '', :size => 30 %>
+<% end %>
+</div>

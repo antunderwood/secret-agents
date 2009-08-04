@@ -7,11 +7,14 @@ body {
 }
 
 p {
-  padding: 10px;
+  padding : 5px;
 }
 
+a { color: #000; }
+a:visited { color: #000; }
+a:hover { color: #fff; background-color:#000; }
 #wrapper { 
-  margin: 10px auto;
+  margin: 5px auto;
   width: 1000px;
 }
 
@@ -19,7 +22,7 @@ p {
   float: left;
   color: #333;
   background: #996633;
-  height: 600px;
+ // height: 600px;
   width: 1000px;
   display: inline;
   font-family: sans-serif;
@@ -41,7 +44,7 @@ p {
   font-weight:  bold;
   display:  inline;
 }
-#content .login_field{
+#content .login_field, #secret_message_form input{
   font-size: 30px;
   font-weight :bold;
   color: #660000;
@@ -62,16 +65,18 @@ p {
    border: 4px solid #000000;
 }
 #current_user{
-  margin-top: 20px;
   font-size: 15px;
   color: #660000;
-  text-align: left;
+}
+#secret_message_form {
+  font-size: 30px;
+  margin-top: 50px;
 }
 #header {
   color: #333;
   width: 1000px;
   float: left;
-  height: 95px;
+  height: 200px;
   background: #996633;
   text-align: center;
 }
@@ -83,9 +88,7 @@ p {
   color: #333;
   background: #FFFFFF;
 }
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+
 
 .fieldWithErrors {
   padding: 2px;
@@ -94,16 +97,18 @@ a:hover { color: #fff; background-color:#000; }
 }
 
 #errorExplanation {
-  width: 400px;
+  //width: 400px;
   border: 2px solid red;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
+	margin-top: 20px;
   background-color: #f0f0f0;
 }
 
 #errorExplanation h2 {
-  text-align: left;
+ // text-align: left;
+ display: none;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
   font-size: 12px;
@@ -120,6 +125,6 @@ a:hover { color: #fff; background-color:#000; }
 
 #errorExplanation ul li {
   font-size: 12px;
-  list-style: square;
+  list-style: none;
 }
 
