@@ -3,8 +3,8 @@
 <% form_for @user_session do |form| %>   
 <%= form.error_messages %>
 <table>
-  <tr><td><h2>Code Name&nbsp;</h2></td><td> <%= form.text_field :username , :class => "login_field" %>  </td></tr>
-  <tr><td><h2>Password&nbsp;</h2></td><td><%= form.password_field :password, :class => "login_field" %></td></tr>
+  <tr><td><h2>Code Name&nbsp;</h2></td><td> <%= form.text_field :username , :class => "login_field", :size => 15 %>  </td></tr>
+  <tr><td><h2>Password&nbsp;</h2></td><td><%= form.password_field :password, :class => "login_field", :size => 15 %></td></tr>
 </table>
 <%= form.submit "Login", :class => "login_submit" %>
 <% end %>  
