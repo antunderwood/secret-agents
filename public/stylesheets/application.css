@@ -39,8 +39,25 @@ p {
   font-weight:  bold;
   display:  inline;
 }
-#content input{
-  font-size: 30px;	
+#content .login_field{
+  font-size: 30px;
+  font-weight :bold;
+  color: #660000;
+  padding: 1px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: 1px #FFFFFF;
+}
+#content .login_submit
+{
+   font-size: 30px;
+   font-weight :bold;
+   color: #660000;
+   padding: 5px 15px;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   background-color: #FFFFCC;
+   border: 4px solid #000000;
 }
 #header {
   color: #333;

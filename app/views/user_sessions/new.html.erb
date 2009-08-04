@@ -1,17 +1,11 @@
-<h1>Login</h1>
+<h1>Secret Agents Login</h1>
+<%=  image_tag "logo.png"%><br/>
 <% form_for @user_session do |form| %>   
-<%= form.error_messages %>   
-<ol class="formList">   
-  <li>   
-    <%= form.label :username, "Username" %>   
-    <%= form.text_field :username %>   
-  </li>   
-  <li>   
-    <%= form.label :password, "Password" %>   
-    <%= form.password_field :password %>   
-  </li>   
-  <li>   
-    <%= form.submit "Submit" %>   
-  </li>   
-</ol>   
-<% end %> 
+<%= form.error_messages %>
+<table>
+  <tr><td><h2>Code Name&nbsp;</h2></td><td> <%= form.text_field :username , :class => "login_field" %>  </td></tr>
+  <tr><td><h2>Password&nbsp;</h2></td><td><%= form.password_field :password, :class => "login_field" %></td></tr>
+</table>
+<%= form.submit "Login", :class => "login_submit" %>
+<% end %>  
+
