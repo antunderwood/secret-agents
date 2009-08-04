@@ -1,7 +1,7 @@
 class SecretMessagesController < ApplicationController
   before_filter :load_secret_message, :only => [:edit, :update, :destroy, :show]
 
-  access_control do
+  access_control  do
 	  allow :admin
 		allow :agent , :of => :secret_message, :to =>  [:show]
   end
@@ -19,11 +19,14 @@ class SecretMessagesController < ApplicationController
   # GET /secret_messages/1
   # GET /secret_messages/1.xml
   def show
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @secret_message }
-    end
+    if @secret_message.nil?
+		  render :template => 'pages/message_not_found' 
+		else
+				respond_to do |format|
+					format.html # show.html.erb
+					format.xml  { render :xml => @secret_message }
+				end
+		end
   end
 
   # GET /secret_messages/new

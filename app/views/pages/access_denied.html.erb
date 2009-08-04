@@ -1,1 +1,4 @@
-You are not permitted to view this page
+You are not permitted to view this page<br/>
+<% if @secret_message %>
+You need to be logged in as <%= @secret_message.accepted_roles.find_by_name("agent").users.first.username %>
+<% end %>

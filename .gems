@@ -1,2 +1,3 @@
 binarylogic-authlogic -v '>=2.1.1' -s 'gems.github.com'
 be9-acl9  -v '0.10.0' -s gems.github.com
+josevalim-rails-footnotes -v '>=3.6.2' -s gems.github.com
