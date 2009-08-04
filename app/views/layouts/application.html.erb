@@ -5,16 +5,25 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Secret Agents</title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-<%- if current_user  -%>
-<br/>
-Logged in as <%= current_user.username %>
-<%- end -%>
+<div id="wrapper"> 
+  <div id="header"> 
+    <p><%= image_tag "top_secret.png" %></p>		 
+  </div> 
+  <div id="content"> 
+    <%= yield %>
+    <%- if current_user  -%>
+    <br/>
+    Logged in as <%= current_user.username %>
+    <%- end -%>
+  </div> 
+  <div id="footer"> 
+    <p>This is the Footer</p>		
+  </div>
+</div>
 </body>
 </html>
