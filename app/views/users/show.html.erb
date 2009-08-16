@@ -1,4 +1,5 @@
-Welcome <%= current_user.username %><br/><br/>
+Welcome <%= current_user.username %> (also known as <%= current_user.real_name %>)<br/><br/>
+<%= image_tag "#{current_user.image_name}.png" %>
 Your current mission is <span class="current_mission">Ethan's Birthday Mystery</span>
 <div id= "secret_message_form">
 <% form_tag({:controller => "secret_messages", :action => "show", :id =>''})  do %>
