@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  access_control do
+    allow :admin
+    allow logged_in, :to => :show
+  end
 def new  
     @user = User.new  
 end  
@@ -19,6 +23,7 @@ def show
 	else
     @user = current_user
   end
+  @secret_messages = SecretMessage.find(:all)
 end
 
 def edit   
