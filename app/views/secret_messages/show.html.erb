@@ -7,7 +7,8 @@
   <b>Task:</b>
   <%= @secret_message.description %>
 </p>
-
+<br/>
+<%= link_to "Back to secret agent page", user_url(current_user) %>
 <% if admin? %>
 		<%= link_to 'Edit', edit_secret_message_path(@secret_message) %> |
 		<%= link_to 'Back', secret_messages_path %>
