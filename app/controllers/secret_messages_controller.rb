@@ -3,7 +3,7 @@ class SecretMessagesController < ApplicationController
 
   access_control  do
 	  allow :admin
-    allow :agent, :of => Secret_message, :to => [:show]
+    allow :agent, :of => SecretMessage, :to => [:show]
 		# allow :agent , :of => :secret_message, :to =>  [:show]
   end
   # GET /secret_messages
