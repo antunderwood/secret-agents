@@ -23,7 +23,7 @@ def show
 	else
     @user = current_user
   end
-  @secret_messages = SecretMessage.find(:all)
+  @secret_messages = SecretMessage.find(:all, :order => :id)
 end
 
 def edit   
