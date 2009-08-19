@@ -1,12 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :secret_messages
   map.resources :users
-	map.login 'login', :controller => 'user_sessions', :action => 'new'  
+  map.login 'login', :controller => 'user_sessions', :action => 'new'  
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
   map.resources :user_sessions 
 	
-	 map.site 'site/:name', :controller => 'page', :action => 'show'
-
+  #map.site 'site/:name', :controller => 'page', :action => 'show'
+  map.resources :pages, :controller => 'pages', :only       => [:show]
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
