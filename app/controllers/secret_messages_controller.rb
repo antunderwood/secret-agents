@@ -90,7 +90,7 @@ class SecretMessagesController < ApplicationController
   end
 	private
 		def load_secret_message
-				@secret_message = SecretMessage.find(:first , :conditions => ['LOWER(title) = ?' , params[:id].gsub(/-/, ' ').downcase])
+				@secret_message = SecretMessage.find(:first , :conditions => ['LOWER(title) LIKE ?' , "#{params[:id].gsub(/-/,' ')}%"])
 		end
 
 end
